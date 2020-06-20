@@ -1,0 +1,39 @@
+#main {
+  display: grid;
+  grid: "gutter-left main gutter-right" 1fr / auto minmax(auto, 1200px) auto;
+  & > div {
+    display: contents;
+  }
+}
+.d-header > .wrap {
+  max-width: initial;
+  width: initial;
+}
+
+#main-outlet {
+  grid-area: main;
+  max-width: initial;
+
+  .topic-body,
+  .small-action {
+    width: initial;
+    max-width: initial;
+    float: none;
+  }
+}
+
+.container.posts {
+  display: grid;
+  grid: "posts timeline" 1fr / 1fr 250px;
+  .row {
+    grid-area: posts;
+  }
+  .timeline-container {
+    grid-area: timeline;
+    margin: 0;
+    position: initial;
+  }
+  & .ember-view {
+    display: contents;
+  }
+}
