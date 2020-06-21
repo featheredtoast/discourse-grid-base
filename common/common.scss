@@ -37,3 +37,41 @@
     display: contents;
   }
 }
+
+.topic-post article {
+  border-top: 1px solid #e9e9e9;
+  display: grid;
+  grid:
+    "avatar names post-infos" auto
+    "cooked cooked cooked" auto
+    "post-menu post-menu post-menu" auto
+    "topic-map topic-map topic-map" auto
+    / auto 1fr auto;
+  .row,
+  .topic-body,
+  .topic-meta-data,
+  .contents {
+    display: contents;
+  }
+  .topic-avatar {
+    grid-area: avatar;
+  }
+  .names {
+    grid-area: names;
+  }
+  .post-infos {
+    grid-area: post-infos;
+  }
+  .cooked {
+    grid-area: cooked;
+  }
+  .post-actions {
+    grid-area: post-actions;
+  }
+  .topic-map {
+    grid-area: topic-map;
+  }
+  .post-menu-area {
+    grid-area: post-menu;
+  }
+}
